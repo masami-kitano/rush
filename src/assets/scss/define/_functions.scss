@@ -1,0 +1,88 @@
+@charset "UTF-8";
+// ==============================================
+// [ファイル概要] 関数
+// ==============================================
+@use "sass:math";
+
+// ----------
+// [名称] em設定用関数
+// [概要] emを取得する。計算に必要となるフォントサイズはデフォルト値を初期値として、オプションで変更する。
+//        計算方法：(値 / フォントサイズ) * 1em
+// [引数] $val：emに変更したい数値 (必須)
+//        $fz： 計算用のfont-size (必須)
+// ----------
+@function getEm($val, $fz) {
+  @return math.div($val, $fz) * 1em;
+}
+
+// ----------
+// [名称] vw取得用関数
+// [概要] vwを取得する。計算に必要となるフォントサイズはデフォルト値を初期値として、オプションで変更する。
+//        計算方法：((100 / 基準となる画面幅) * 値) * 1vw
+// [引数] $val：vwに変更したい数値 (必須)
+//        $screenWidth： 計算用の画面幅 (必須)
+// ----------
+@function getVw($val, $screenWidth) {
+  @return ((100 / $screenWidth) * $val) * 1vw;
+}
+
+// ----------
+// [名称] line-heightでの余分な文字の空白を算出する関数
+// [概要] 
+//  計算方法：((フォントサイズ * line-height) - フォントサイズ) / 2
+// [引数]
+//  $fontSizeUnitless： 単位なしフォントサイズ (必須)
+//  $lineHeight： line-height (必須)
+// ----------
+@function getTextMargin($fontSizeUnitless, $lineHeight) {
+  @return math.div((($fontSizeUnitless * $lineHeight) - $fontSizeUnitless), 2);
+}
+
+// ---
+// pxをremに変換
+// ---
+@function my_rem($px, $base: 16px) {
+  $value: $px;
+
+  // 単位がpx以外の場合は警告を出してそのまま返す
+  @if (unit($px) != 'px') {
+    @warn 'my_rem()の引数にpx以外の値を指定しても計算できません';
+    @return $value;
+  }
+
+  $value: math.div(strip-unit($px), strip-unit($base)) * 1rem;
+
+  @return $value;
+}
+
+// ---
+// pxをvw変換
+// ---
+@function my_vw($px, $base: 375px) {
+  $value: $px;
+
+  // 単位がpx以外の場合は警告を出してそのまま返す
+  @if (unit($px) != 'px') {
+    @warn 'my_vw()の引数にpx以外の値を指定しても計算できません';
+    @return $value;
+  }
+
+  $value: math.div(strip-unit($px), strip-unit($base)) * 100vw;
+
+  @return $value;
+}
+
+// ---
+// 数値から単位を除く
+// ---
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+
+  @return $number;
+}
+
+// ************************
+// 以下は案件毎に追加
+// ************************

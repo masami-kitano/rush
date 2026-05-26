@@ -1,0 +1,21 @@
+@charset "UTF-8";
+// ==============================================
+// [ファイル概要] アニメーション
+// ==============================================
+@keyframes autoSlider {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes autoSliderReverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

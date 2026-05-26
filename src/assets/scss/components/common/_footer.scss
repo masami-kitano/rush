@@ -1,0 +1,55 @@
+@charset "UTF-8";
+// ===============================================
+// [ファイル概要] フッター
+// ===============================================
+@use "sass:math";
+@use "../../define/" as *;
+
+.c-footer{
+  background-color: var(--beige);
+}
+
+.c-footer__inner{
+  background-image: url("../images/common/footer_img_1_sp.webp");
+  background-size: cover;
+  padding-block-end: my_rem(30px);
+  @media (--tablet) {
+    background-image: url("../images/common/footer_img_1_pc.webp");
+    padding-block-end: my_rem(16px);
+  }
+}
+
+.c-footer__logo{
+  padding-block-start: my_rem(158px);
+  @media (--tablet) {
+    padding-block-start: my_rem(166px);
+  }
+}
+
+.c-footer__logoImage{
+  width: my_rem(408px);
+  margin-inline: auto;
+  @media (--tablet) {
+    width: my_rem(345px);
+  }
+}
+
+.c-footer__copyright{
+  padding-block-start: my_rem(121px);
+  text-align: center;
+  @media (--tablet) {
+    padding-block-start: my_rem(130px);
+  }
+}
+
+.c-footer__small{
+  line-height: math.div(28,23);
+  letter-spacing: .11em;
+  font-family: var(--font-en);
+  font-weight: var(--font-bold);
+  font-size: my_rem(23px);
+  color: var(--beige);
+  @media (--tablet) {
+    font-size: my_rem(16px);
+  }
+}

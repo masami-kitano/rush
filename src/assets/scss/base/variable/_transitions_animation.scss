@@ -1,0 +1,14 @@
+@charset "UTF-8";
+// ===============================================
+// [ファイル概要] Transitions & Animation
+// ===============================================
+@use "sass:math";
+@use "../../define/" as *;
+
+:root {
+  // Transition Duration
+  --duration-hover: 0.3s;  // ホバー時
+  --duration-slider: 1s; // スライダー
+  --duration-header: 0.3s;  // ナビゲーション
+  --opacity: 0.7;
+}

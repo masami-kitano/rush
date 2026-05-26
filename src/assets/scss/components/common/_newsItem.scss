@@ -1,0 +1,35 @@
+@charset "UTF-8";
+// ===============================================
+// [ファイル概要] ニュースアイテム
+// ===============================================
+@use "sass:math";
+@use "../../define/" as *;
+
+.c-newsItem{
+  display: grid;
+  grid-template-columns: my_rem(115px) 1fr;
+  gap: my_rem(40px);
+  padding-block: my_rem(30px);
+  border-bottom: my_rem(1px) solid var(--brown);
+  @media (--tablet) {
+    grid-template-columns: my_rem(80px) 1fr;
+    gap: my_rem(30px);
+    padding-block: my_rem(10px);
+  }
+
+  &:first-of-type{
+    border-top: my_rem(1px) solid var(--brown);
+  }
+}
+
+.c-newsItem__time,
+.c-newsItem__title{
+  line-height: math.div(46,23);
+  font-size: my_rem(22px);
+  @media (--tablet) {
+    line-height: math.div(17,12);
+    letter-spacing: .1em;
+    font-weight: var(--font-bold);
+    font-size: my_rem(12px);
+  }
+}

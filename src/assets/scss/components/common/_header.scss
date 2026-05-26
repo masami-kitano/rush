@@ -1,0 +1,39 @@
+@charset "UTF-8";
+// ===============================================
+// [ファイル概要] ヘッダー
+// ===============================================
+@use "sass:math";
+@use "../../define/" as *;
+
+.c-header {
+  position: fixed;
+  top: my_rem(80px);
+  right: 0;
+  z-index: 999;
+  @media (--tablet) {
+    top: my_rem(63px);
+  }
+}
+
+.c-header__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: my_rem(149px);
+  height: my_rem(50px);
+  background-color: var(--black-1);
+  padding-block: my_rem(10px);
+  padding-inline: my_rem(15px);
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-family: var(--font-en);
+  font-weight: var(--font-bold);
+  font-size: my_rem(16px);
+  color: var(--beige);
+  @include hoverOpacity;
+  @media (--tablet) {
+    width: my_rem(90px);
+    height: my_rem(30px);
+    font-size: my_rem(10px);
+  }
+}

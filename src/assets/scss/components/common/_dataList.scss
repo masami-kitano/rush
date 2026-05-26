@@ -1,0 +1,57 @@
+@charset "UTF-8";
+// ===============================================
+// [ファイル概要] データリスト
+// ===============================================
+@use "sass:math";
+@use "../../define/" as *;
+
+.c-dataList {
+  display: flex;
+  flex-direction: column;
+  gap: my_rem(30px);
+  @media (--tablet) {
+    gap: my_rem(10px);
+  }
+}
+
+.c-dataList__item {
+  display: grid;
+  grid-template-columns: my_rem(132px) 1fr;
+  gap: my_rem(22px);
+  padding-block-end: my_rem(30px);
+  border-block-end: 1px solid var(--brown);
+  @media (--tablet) {
+    grid-template-columns: my_rem(80px) 1fr;
+    gap: my_rem(27px);
+    padding-block-end: my_rem(10px);
+  }
+
+  &:first-child {
+    padding-block-start: my_rem(30px);
+    border-block-start: 1px solid var(--brown);
+    @media (--tablet) {
+      padding-block-start: my_rem(10px);
+    }
+  }
+}
+
+.c-dataList__term {
+  line-height: calc(46/22);
+  font-weight: var(--font-bold);
+  font-size: my_rem(22px);
+  @media (--tablet) {
+    letter-spacing: 0.1em;
+    font-size: my_rem(12px);
+  }
+}
+
+.c-dataList__data {
+  line-height: calc(46/22);
+  font-weight: var(--font-medium);
+  font-size: my_rem(22px);
+  @media (--tablet) {
+    letter-spacing: 0.1em;
+    font-weight: var(--font-bold);
+    font-size: my_rem(12px);
+  }
+}

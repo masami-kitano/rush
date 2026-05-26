@@ -1,0 +1,64 @@
+@charset "UTF-8";
+// ===============================================
+// [ファイル概要] カード
+// ===============================================
+@use "sass:math";
+@use "../../define/" as *;
+
+.c-card{
+  display: flex;
+  gap: my_rem(20px);
+  @include hoverOpacity;
+  pointer-events: none;
+}
+
+.c-card__inner{
+  width: 100%;
+}
+
+.c-card__category{
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  line-height: math.div(23,20);
+  letter-spacing: .1em;
+  font-weight: var(--font-bold);
+  font-size: my_rem(20px);
+  @media (--tablet) {
+    font-size: my_rem(10px);
+  }
+}
+
+.c-card__image{
+  width: 100%;
+}
+
+.c-card__body{
+  margin-block-start: my_rem(20px);
+}
+
+.c-card__tag{
+  line-height: math.div(23,20);
+  letter-spacing: .1em;
+  font-weight: var(--font-bold);
+  font-size: my_rem(20px);
+  @media (--tablet) {
+    font-size: my_rem(10px);
+  }
+}
+
+.c-card__title{
+  margin-block-start: my_rem(20px);
+  line-height: math.div(23,20);
+  letter-spacing: .1em;
+  font-weight: var(--font-bold);
+  font-size: my_rem(28px);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  @media (--tablet) {
+    margin-block-start: my_rem(10px);
+    font-size: my_rem(16px);
+  }
+}

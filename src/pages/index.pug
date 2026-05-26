@@ -1,0 +1,73 @@
+//- ====================
+//- 【概要】トップページ
+//- 【詳細】
+//- ====================
+//- テンプレート
+extends ../pug/layouts/_layout.pug
+
+//- 現在のページ
+block currentPage
+  - var currentPage = 'top'
+  - var dirPath = self.htmlWebpackPlugin.options.dirPath
+  - var domain = self.htmlWebpackPlugin.options.domain
+  - console.log('variables: ', self.htmlWebpackPlugin.options.dirPath)
+  - console.log('domain', domain)
+  - console.log('dirPath', dirPath)
+  -
+    var pageInfo = {
+      url_path: ``, //- canonicalで使用
+      title: 'サウナ専門施工会社｜SAUNA PRO TEAM RUSH', //- ページタイトル
+      description: '「あなただけのサウナを最高最適化するサウナ施工のプロ集団」サウナ施工の各分野のプロが集結したサウナ専門の施工会社です。フルオーダー／カスタム／バレルサウナを施設から個人邸まで、様々なサウナ空間のご相談を。', //- ディスクリプション 120文字以内に収めるのが良い
+      bodyClass: '',
+      ogp_title: 'サウナ専門施工会社｜SAUNA PRO TEAM RUSH', //- [OGP]ページのタイトル
+      ogp_type: 'website', //- [OGP]ページのタイプ トップページに「website」、ブログに「blog」、下層ページに「article」
+      ogp_url: `${domain}`, //- [OGP]ページのURL（フルパス）
+      ogp_description: '「あなただけのサウナを最高最適化するサウナ施工のプロ集団」サウナ施工の各分野のプロが集結したサウナ専門の施工会社です。フルオーダー／カスタム／バレルサウナを施設から個人邸まで、様々なサウナ空間のご相談を。', //- [OGP]ページのディスクリプション
+    }
+
+block append css
+
+block append headJS
+
+//- HTML(body要素内)
+block content
+  //- ヘッダー
+  //- include ../pug/mixins/common/_header.pug
+  //- +header( currentPage )
+  //- メイン
+  main.bg-beige.overflow-hidden
+    //- mv
+    include ../pug/mixins/_mv.pug
+    +mv()
+
+    //- works
+    include ../pug/mixins/_works.pug
+    +works()
+
+    //- mission
+    include ../pug/mixins/_mission.pug
+    +mission()
+
+    //- news
+    include ../pug/mixins/_news.pug
+    +news()
+
+    //- store
+    include ../pug/mixins/_store.pug
+    +store()
+
+    //- saunakama
+    include ../pug/mixins/_saunakama.pug
+    +saunakama()
+
+    //- recruit
+    include ../pug/mixins/_recruit.pug
+    +recruit()
+
+    //- contact
+    include ../pug/mixins/_contact.pug
+    +contact()
+
+  //- フッター
+  include ../pug/mixins/common/_footer.pug
+  +footer( currentPage )

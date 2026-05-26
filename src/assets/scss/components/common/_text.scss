@@ -1,0 +1,25 @@
+@charset "UTF-8";
+// ===============================================
+// [ファイル概要] テキスト
+// ===============================================
+@use "sass:math";
+@use "../../define/" as *;
+
+.c-text {
+  line-height: math.div(46,24);
+  font-weight: var(--font-medium);
+  font-size: my_rem(24px);
+  color: var(--brown);
+  @media (--tablet) {
+    letter-spacing: .05em;
+    font-size: my_rem(14px);
+  }
+
+  &._beige_ {
+    color: var(--beige);
+  }
+
+  &._center_ {
+    text-align: center;
+  }
+}

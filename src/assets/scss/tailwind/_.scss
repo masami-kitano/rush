@@ -1,0 +1,28 @@
+@charset "UTF-8";
+@use "sass:math";
+@use "../define/" as *;
+// ===============================================
+// [ファイル概要] tailwindcss
+// ===============================================
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// 背景色
+.bg-black {
+  background-color: var(--black-2);
+}
+
+.bg-beige {
+  background-color: var(--beige);
+}
+
+// ボーダー
+.b-beige {
+  border: my_rem(5px) solid var(--beige);
+}
+
+// テキスト
+.font-en {
+  font-family: var(--font-en);
+}

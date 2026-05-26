@@ -1,0 +1,24 @@
+@charset "UTF-8";
+// ===============================================
+// [ファイル概要] Padding, Margin, Space Between
+// ===============================================
+@use "sass:math";
+@use "../../define/" as *;
+
+:root {
+  // ----------
+  // Padding
+  // ----------
+  --px-page: #{my_rem(20px)};
+  @media (--tablet) {
+    --px-page: #{my_rem(15px)};
+  }
+
+  // ----------
+  // Margin
+  // ----------
+
+  // ----------
+  // Space Between
+  // ----------
+}

@@ -1,0 +1,31 @@
+/*
+ * 埋め込みを一旦全部非表示
+ */
+div[aria-label="埋め込み"] div[role="presentation"] .block-editor-block-types-list__list-item {
+  display: none;
+}
+
+/*
+ * 非表示にした埋め込みから必要なものを表示
+ */
+/* 「埋め込み」 */
+/* div[aria-label="埋め込み"] div[role="presentation"] .block-editor-block-types-list__list-item:has(button[class$='embed']) {
+  display: block;
+} */
+
+/* 「youtube」 */
+div[aria-label="埋め込み"] div[role="presentation"] .block-editor-block-types-list__list-item:has(button[class*='youtube']) {
+  display: block;
+}
+
+/*
+下記は youtube と同じ書き方
+Twitter: twitter
+Youtube: youtube
+Wordpress: wordpress
+SoundCloud: soundcloud
+Spotify: spotify
+Flickr: flickr
+vimeo: vimeo
+その他は調べること
+*/

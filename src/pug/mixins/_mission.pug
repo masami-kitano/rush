@@ -1,0 +1,48 @@
+//- ====================
+//- 【概要】 トップ ミッション
+//- 【詳細】
+//- ====================
+mixin mission( )
+  include ./common/_title.pug
+  include ./common/_button.pug
+
+  section.c-section(class="pt-[11.875rem] tablet:pt-[7.5rem]")
+    .c-section__inner.c-mission
+      .c-mission__head
+        +title({
+          main: 'サウナ屋の使命',
+          sub: 'mission',
+          className: '_white_'
+        })
+        p.c-mission__lead サウナを最高最適化する#[br]サウナのプロ集団
+        p.c-mission__text 日々、ととのえていますか？#[br]どんなサウナがお好きですか？#[br]オールドサウナ？北欧サウナ？#[br]それとも、これまで体験したことないサウナ…？#[br]Sauna Pro Team RUSHは、#[br]頭の中で思い描いているサウナへと#[br]最適にチューニングし、#[br]最高のサウナを一緒におつくり致します。
+        img.c-mission__imageText(src=`${dirPath}assets/images/top/mission_text.svg`, alt="Sauna life, Tuned by RuSH", width=`197`, height=`132`, decoding=`async`, loading=`lazy`)
+        img.c-mission__arrow(src=`${dirPath}assets/images/common/arrow_img.svg`, alt="", width=`30`, height=`30`, decoding=`async`, loading=`lazy`)
+        +button({
+          Elm: 'a',
+          text: 'サウナ屋の使命',
+        })(class="_pcLarge_ mx-auto mt-[4.375rem] tablet:mt-10" href=`${dirPath}mission/`)
+      .c-mission__body
+        +title({
+          main: 'サウナ屋のできること',
+          sub: 'what we do',
+          className: '_pcLeft_'
+        })
+        -
+          const missions = [
+          { title: 'サウナ施工／造作サウナ', text: 'RUSHとしてこれまで携わったサウナの施工実績は600件以上。サウナの本場である北欧・エストニアで研修を受けるなど、豊富な実績と知識を持った現場監督や職人たちが集まっているので、説明書のない組立ユニット式サウナや、複雑な造作サウナなどの施工も安心してお任せいただけます。', buttonText: 'サウナ施工' },
+          { title: 'サウナ設計／資材の仕入れ', text: 'RUSHには各分野のプロフェッショナルが集まっており、サウナの設計デザインからユニットサウナやストーブの選定・資材の仕入れ・施工までを一気通貫で行うことが可能です。お客様への丁寧なヒアリングを行いながら、温度・湿度・給排気のバランスを考慮したサウナをご提案します。', buttonText: 'サウナ設計' },
+          { title: 'サウナストーブ販売', text: 'ストーブはサウナの心臓とも呼べるほど大切なもの。RUSHでは、Tylo社をはじめとした高品質で安全な海外製の電気・薪ストーブを数多く取り揃えており、お客様の理想のサウナに合わせた最適なストーブをお選びいただけます。電気ストーブの場合のわかりにくいサウナの電気工事もお任せいただけます。', buttonText: 'サウナストーブ販売' },
+          { title: 'サウナメンテナンス', text: 'RUSHでは、サウナの施工が終わってからもお客様との信頼関係を大切にしたいと考えています。長く使用する中では思わぬ不調が出てくることもあるサウナ。せっかくのサウナを長く安全に楽しんでいただけるよう、充実のアフターメンテナンスも提供しています。お客様がととのえるサウナライフのために。', buttonText: 'サウナメンテナンス' },
+          ];
+
+        ul.c-mission__list
+          each mission in missions
+            li.c-mission__item
+              h3.c-mission__itemTitle= mission.title
+              p.c-mission__itemText= mission.text
+              +button({
+                Elm: 'div',
+                text: mission.buttonText,
+              })(class="_brown_ mx-auto mt-10")
+

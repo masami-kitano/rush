@@ -1,0 +1,32 @@
+//- ====================
+//- 【概要】 top　news
+//- 【詳細】
+//- ====================
+mixin news()
+  include ./common/_title.pug
+  include ./common/_button.pug
+
+  section.c-section(class="pt-[5rem]")
+    .c-section__inner._small_
+      div.c-news
+        div.c-news__title
+          +title({
+            main: '最新情報',
+            sub: 'news',
+            className: '_pcLeft_',
+          })
+        div.c-news__contents(class="mt-[2.5rem] tablet:mt-0")
+          .c-newsItem
+            time.c-newsItem__time(datetime="2023-10-01") 2023.10.01
+            .c-newsItem__title サイトのリニューアルをしました。
+          .c-newsItem
+            time.c-newsItem__time(datetime="2023-10-01") 2023.10.01
+            .c-newsItem__title サイトのリニューアルをしました。#[br]サイトのリニューアルをしました。
+          .c-newsItem
+            time.c-newsItem__time(datetime="2023-10-01") 2023.10.01
+            .c-newsItem__title サイトのリニューアルをしました。
+        div.c-news__button(class="mt-[3.75rem] tablet:mt-0")
+          +button({
+            Elm: 'a',
+            text: '最新情報の一覧',
+          })(class="_brownTransparent_ mx-auto tablet:ml-0" href="https://rush37.official.ec/" target="_blank" rel="noreferrer")

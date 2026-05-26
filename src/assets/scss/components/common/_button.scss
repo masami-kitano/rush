@@ -1,0 +1,53 @@
+@charset "UTF-8";
+// ===============================================
+// [ファイル概要] ボタン
+// ===============================================
+@use "sass:math";
+@use "../../define/" as *;
+
+.c-button {
+  display: block;
+  width: my_rem(560px);
+  max-width: 100%;
+  background-color: var(--black-1);
+  padding-block: my_rem(10px);
+  padding-inline: my_rem(10px);
+  border-radius: my_rem(25px);
+  text-align: center;
+  line-height: math.div(29,20);
+  letter-spacing: .1em;
+  font-weight: var(--font-bold);
+  font-size: my_rem(20px);
+  color: var(--beige);
+  @include hoverOpacity;
+  @media (--tablet) {
+    width: my_rem(240px);
+    padding-block: my_rem(5px) my_rem(7px);
+    font-size: my_rem(12px);
+  }
+
+  &._beige_ {
+    background-color: var(--beige);
+    color: var(--black-2);
+  }
+
+  &._brown_ {
+    background-color: var(--brown);
+  }
+
+  &._brownTransparent_ {
+    background-color: transparent;
+    border: my_rem(1px) solid var(--brown);
+    color: var(--brown);
+  }
+
+  &.w-full {
+    width: 100%;
+  }
+
+  &._pcLarge_ {
+    @media (--tablet) {
+      width: my_rem(280px);
+    }
+  }
+}

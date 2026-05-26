@@ -1,0 +1,29 @@
+/*---------------------------
+  wordpress
+---------------------------*/
+.wp-template-info { position: fixed; bottom: 20px; left: 20px; z-index: 10000; padding: 1em 1.5em; background: rgba(0, 0, 0, 0.5); color: #fff; line-height: 1.7; }
+
+.wp-template-info.is-closed { animation: fadeOut .5s; animation-fill-mode: both; }
+
+.wp-template-info-inner { position: relative; }
+
+.wp-template-info-accordion { padding-right: 30px; cursor: pointer; }
+
+.wp-template-info p { margin: 0; font-size: 13px; }
+
+.wp-template-info ul { padding-left: 10px; margin: 0; font-size: 12px; }
+
+.wp-template-info-detail { display: none; }
+
+.wp-template-info-close { position: absolute; top: -12px; right: -15px; font-size: 25px; cursor: pointer; }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

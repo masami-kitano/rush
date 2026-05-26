@@ -1,0 +1,43 @@
+//- ====================
+//- 【概要】 top　> saunakama
+//- 【詳細】
+//- ====================
+mixin saunakama()
+  include ./common/_title.pug
+  include ./common/_button.pug
+
+  section.c-section(class="mt-[9.375rem]")
+    .c-section__inner
+      .bg-white(class="pt-[5rem]")
+        //- title
+        +title({
+          main: 'お世話になっている方々',
+          sub: 'saunakama',
+          className: ''
+        })
+        p.c-text.text-center(class="mt-[1.875rem] tablet:mt-[1.875rem]") RUSHのアパレルを身にまとい、#[br(class="tablet:hidden")]ブランドの魅力を発信してくださるプロ。#[br]サウナ施設や施工現場で、#[br(class="tablet:hidden")]プロの技術で支えてくださる企業、施設。#[br]サウナをもっと楽しく、もっと自由にするために、#[br]ともに歩ませていただいている、#[br(class="tablet:hidden")]頼もしいサウ仲間のみなさま。
+        ul(class="grid grid-cols-2 gap-[5rem] max-w-[35rem] mx-auto mt-[2.813rem] tablet:grid-cols-[repeat(4,15rem)] tablet:justify-center tablet:gap-[2.5rem] tablet:max-w-full tablet:mt-[1.875rem]")
+          li
+            img.w-full(src=`${dirPath}assets/images/top/saunakama_img_1.webp`, alt="", width="240", height="380", decoding="async", loading="lazy")
+          li
+            img.w-full(src=`${dirPath}assets/images/top/saunakama_img_2.webp`, alt="", width="240", height="380", decoding="async", loading="lazy")
+          li
+            img.w-full(src=`${dirPath}assets/images/top/saunakama_img_3.webp`, alt="", width="240", height="380", decoding="async", loading="lazy")
+          li
+            img.w-full(src=`${dirPath}assets/images/top/saunakama_img_4.webp`, alt="", width="240", height="380", decoding="async", loading="lazy")
+
+        ul.js-fadeInList(class="relative max-w-[78.125rem] mx-auto")
+          li.js-fadeInList__item(class="absolute z-20 top-[5.313rem] left-[3.3751rem] w-[13rem] tablet:top-[3.75rem] tablet:left-[11.563rem]")
+            img(src=`${dirPath}assets/images/top/sticker_img_1.webp`, alt="", width="208", height="104", decoding="async", loading="lazy")
+          li.js-fadeInList__item(class="absolute z-20 top-[12.625rem] left-[4.063rem] w-[8.25rem] tablet:top-[8.438rem] tablet:left-[18.188rem]")
+            img(src=`${dirPath}assets/images/top/sticker_img_2.webp`, alt="", width="132", height="132", decoding="async", loading="lazy")
+          li.js-fadeInList__item(class="absolute z-20 top-[3.75rem] left-[17.438rem] w-[8rem] tablet:top-[3.75rem] tablet:left-[26.125rem]")
+            img(src=`${dirPath}assets/images/top/sticker_img_3.webp`, alt="", width="128", height="128", decoding="async", loading="lazy")
+          li.js-fadeInList__item(class="absolute z-20 top-[15.875rem] left-[28rem] w-[10.813rem] tablet:top-[12.188rem] tablet:left-[31.188rem]")
+            img(src=`${dirPath}assets/images/top/sticker_img_4.webp`, alt="", width="173", height="60", decoding="async", loading="lazy")
+          li.js-fadeInList__item(class="absolute z-20 top-[5.313rem] left-[26.563rem] w-[8.375rem] tablet:top-[2.813rem] tablet:left-[35.125rem]")
+            img(src=`${dirPath}assets/images/top/sticker_img_5.webp`, alt="", width="134", height="134", decoding="async", loading="lazy")
+          li.js-fadeInList__item(class="absolute z-20 top-[3.25rem] left-[35.625rem] w-[8.25rem] tablet:top-[3.75rem] tablet:left-[44.563rem]")
+            img(src=`${dirPath}assets/images/top/sticker_img_6.webp`, alt="", width="113", height="190", decoding="async", loading="lazy")
+          li.js-fadeInList__item(class="absolute z-20 top-[13.313rem] left-[13.813rem] w-[11.25rem] tablet:top-[6.063rem] tablet:left-[52.813rem]")
+            img(src=`${dirPath}assets/images/top/sticker_img_7.webp`, alt="", width="180", height="122", decoding="async", loading="lazy")

@@ -1,0 +1,16 @@
+//- ====================
+//- 【概要】 カード
+//- 【詳細】
+//- ====================
+mixin card( options )
+  - options = options || {};
+
+  a.c-card(href="#")&attributes(attributes)
+    .c-card__category !{options.category}
+    .c-card__inner
+      .c-card__imageWrap
+        img.c-card__image(src=`${dirPath}assets/images/sample/works_img.webp`, alt="", width=`280`, height=`280`, decoding=`async`, loading=`lazy`)
+      .c-card__body
+        .c-card__tag !{options.tag}
+        .c-card__title !{options.title}
+

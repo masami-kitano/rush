@@ -1,0 +1,119 @@
+@charset "UTF-8";
+// ===============================================
+// [ファイル概要] ミッション
+// ===============================================
+@use "sass:math";
+@use "../define/" as *;
+
+.c-mission__head{
+  position: relative;
+  background-image: url('../images/top/mission_img_sp.webp');
+  background-size: cover;
+  padding-block: my_rem(80px) my_rem(298px);
+  padding-inline: my_rem(20px);
+  @media (--tablet){
+    background-image: url('../images/top/mission_img_pc.webp');
+    padding-block: my_rem(60px) my_rem(77px);
+  }
+}
+
+.c-mission__lead{
+  margin-block-start: my_rem(50px);
+  text-align: center;
+  line-height: math.div(45,30);
+  letter-spacing: .15em;
+  font-weight: var(--font-black);
+  font-size: my_rem(30px);
+  color: var(--white);
+  @media (--tablet) {
+    margin-block-start: my_rem(40px);
+    font-size: my_rem(20px);
+  }
+}
+
+.c-mission__text{
+  margin-block-start: my_rem(40px);
+  text-align: center;
+  line-height: math.div(46,24);
+  font-size: my_rem(24px);
+  color: var(--white);
+  @media (--tablet) {
+    margin-block-start: my_rem(30px);
+    letter-spacing: .05em;
+    font-size: my_rem(14px);
+  }
+}
+
+.c-mission__imageText{
+  position: absolute;
+  width: my_rem(230px);
+  bottom: my_rem(73px);
+  right: my_rem(40px);
+  @media (--tablet){
+    width: my_rem(197px);
+    bottom: my_rem(43px);
+    right: my_rem(108px);
+  }
+}
+
+.c-mission__arrow{
+  position: absolute;
+  width: my_rem(50px);
+  bottom: my_rem(0px);
+  right: 50%;
+  transform: translateX(50%);
+  @media (--tablet){
+    width: my_rem(30px);
+  }
+}
+
+.c-mission__body{
+  background-color: var(--white);
+  padding-block: my_rem(60px) my_rem(100px);
+  padding-inline: my_rem(55px);
+  @media (--tablet) {
+    padding-block: my_rem(60px) my_rem(35px);
+    padding-inline: my_rem(85px);
+  }
+}
+
+.c-mission__list{
+  display: grid;
+  grid-template-rows: auto;
+  column-gap: my_rem(100px);
+  margin-block-start: my_rem(60px);
+  @media (--tablet){
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: my_rem(40px);
+    margin-block-start: my_rem(40px);
+  }
+}
+
+.c-mission__item {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+}
+
+.c-mission__itemTitle{
+  text-align: center;
+  line-height: math.div(44,30);
+  letter-spacing: .1em;
+  font-weight: var(--font-bold);
+  font-size: my_rem(30px);
+  @media (--tablet){
+    text-align: left;
+    font-size: my_rem(16px);
+  }
+}
+
+.c-mission__itemText{
+  margin-block-start: my_rem(30px);
+  line-height: math.div(46,22);
+  font-size: my_rem(22px);
+  @media (--tablet){
+    margin-block-start: my_rem(20px);
+    letter-spacing: .05em;
+    font-size: my_rem(13px);
+  }
+}

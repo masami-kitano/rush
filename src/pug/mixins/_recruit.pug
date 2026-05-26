@@ -1,0 +1,25 @@
+//- ====================
+//- 【概要】 top　> recruit
+//- 【詳細】
+//- ====================
+mixin recruit(options)
+  include ./common/_title.pug
+  include ./common/_button.pug
+
+  - const innerBaseClass = 'px-[5.938rem] tablet:px-[6.25rem]'
+  - const innerExtraClass = (options && options.innerClass) || 'bg-white pt-[23.25rem] tablet:pt-[19.25rem]'
+
+  section.c-section
+    .c-section__inner(class=`${innerBaseClass} ${innerExtraClass}`)
+      div(class="relative z-10 w-[35rem] bg-white mx-auto pt-[3.75rem] pb-[4.375rem] px-[3.125rem] b-beige rounded-[5.688rem] tablet:grid tablet:grid-cols-[17.5rem,auto] tablet:gap-x-[5.313rem] tablet:items-center tablet:w-full tablet:py-[2.5rem] tablet:px-[6.25rem]")
+        div
+          +title({
+            main: 'サウナ施工 協力会社 募集中',
+            sub: 'partners wanted',
+            className: '_pcLeft_'
+          })
+        p(class="mt-[1.875rem] text-center leading-[2] text-[1.375rem] tablet:row-span-2 tablet:mt-0 tablet:text-left tablet:text-[0.813rem]") RUSHでは事業の拡大に伴い、#[br(class="tablet:hidden")]共にサウナの施工を担っていただける#[br(class="tablet:hidden")]協力会社を募集しています。#[br(class="tablet:hidden")]新たなパートナーとして、#[br(class="tablet:hidden")]これまでRUSHの培ってきた#[br(class="tablet:hidden")]サウナ施工のノウハウを共有しながら#[br(class="tablet:hidden")]一緒にお客様に最高のサウナを#[br(class="tablet:hidden")]お届けしませんか？#[br]ぜひ、お気軽にお問合せください！
+        +button({
+          Elm: 'a',
+          text: '応募する',
+        })(class="c-button _brown_ mt-[2.5rem] tablet:mt-[0.813rem] tablet:w-full" href=`https://form.run/@form-all` target="_blank" rel="noreferrer")

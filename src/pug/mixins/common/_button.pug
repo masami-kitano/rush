@@ -1,0 +1,9 @@
+//- ====================
+//- 【概要】 ボタン
+//- 【詳細】
+//- ====================
+mixin button(options)
+  - options = options || {};
+  - const Elm = options.Elm
+
+  #{Elm}.c-button&attributes(attributes) !{options.text}

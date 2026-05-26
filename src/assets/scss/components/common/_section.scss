@@ -1,0 +1,25 @@
+@charset "UTF-8";
+// ===============================================
+// [ファイル概要] セクション
+// ===============================================
+@use "sass:math";
+@use "../../define/" as *;
+
+.c-section{
+  position: relative;
+  padding-inline: var(--px-page);
+}
+
+.c-section__inner{
+  max-width: my_rem(1440px);
+  margin-inline: auto;
+
+  &._small_{
+    max-width: my_rem(1080px);
+    margin-inline: auto;
+  }
+
+  &._white_{
+    background-color: var(--white);
+  }
+}

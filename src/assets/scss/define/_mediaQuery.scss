@@ -1,0 +1,56 @@
+@charset "UTF-8";
+// ==============================================
+// [ファイル概要] メディアクエリで使用するブレイクポイント
+// ==============================================
+
+// ----------
+// ブレイクポイント
+// ----------
+$BP_SP_MIN: 360   !default;
+$BP_TABLET: 768   !default; // Tablet : iPadmini6
+$BP_PC:     1024  !default; // PC
+$BP_PC_L:   1440  !default; // PC-L : Figma PC
+$BP_PC_XL:  1920  !default; // PC-XL : フルHD
+
+@custom-media --tablet  (min-width: #{$BP_TABLET}px);
+@custom-media --pc      (min-width: #{$BP_PC}px);
+@custom-media --pcl     (min-width: #{$BP_PC_L}px);
+@custom-media --pcxl    (min-width: #{$BP_PC_XL}px);
+
+@custom-media --max-spmin   not all and (min-width: #{$BP_SP_MIN}px);
+@custom-media --max-tablet  not all and (min-width: #{$BP_TABLET}px);
+@custom-media --max-pc      not all and (min-width: #{$BP_PC}px);
+@custom-media --max-pcl     not all and (min-width: #{$BP_PC_L}px);
+@custom-media --max-pcxl    not all and (min-width: #{$BP_PC_XL}px);
+
+// hover動作が使えるPC
+@custom-media --hover (hover: hover) and (pointer: fine);
+
+// hoverができない端末（スマホ、タブレット）
+@custom-media --hover-none (hover: none);
+
+// ダークモード
+@custom-media --dark (prefers-color-scheme: dark);
+
+// ----------
+// [概要] safari対応
+// ----------
+@mixin mq-safari() {
+  @supports (-webkit-nbsp-mode: space) {
+    @content;
+  }
+}
+
+// ----------
+// [概要] ポートレート、ランドスケープ対応
+// [注意1] 判定条件はブラウザ縦横比が縦長ならportrait、横長ならlandscape。端末からブラウザに何かしらの「今、スマホ端末は縦ですよ」と信号があるわけではない。
+// [注意2]アプリ内でWebViewを埋め込む場合、そのサイズに気をつけなければならない。
+// ----------
+// ポートレート
+@mixin mq-portrait() {
+  @media screen and (orientation: portrait) { @content; }
+}
+// ランドスケープ
+@mixin mq-landscape() {
+  @media screen and (orientation: landscape) { @content; }
+}

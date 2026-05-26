@@ -1,0 +1,49 @@
+//- ====================
+//- 【概要】 top　> contact
+//- 【詳細】
+//- ====================
+mixin contact()
+  include ./common/_title.pug
+  include ./common/_button.pug
+
+  section.c-section(class="mt-[-5.938rem] tablet:mt-[-5.625rem]")
+    div(class="absolute top-[10.5rem] left-[50%] -translate-x-1/2 rotate-[-7deg] z-10 w-full tablet:top-[10.688rem] tablet:rotate-[-5deg]")
+      ul.c-autoSlider
+        li
+          img.c-labelImage(src=`${dirPath}assets/images/common/label_beige.webp`, alt="Sauna Pro Team RUSH", width=`1363`, height=`30`, decoding=`async`, loading=`lazy`)
+        li
+          img.c-labelImage(src=`${dirPath}assets/images/common/label_beige.webp`, alt="Sauna Pro Team RUSH", width=`1363`, height=`30`, decoding=`async`, loading=`lazy`)
+        li
+          img.c-labelImage(src=`${dirPath}assets/images/common/label_beige.webp`, alt="Sauna Pro Team RUSH", width=`1363`, height=`30`, decoding=`async`, loading=`lazy`)
+        li
+          img.c-labelImage(src=`${dirPath}assets/images/common/label_beige.webp`, alt="Sauna Pro Team RUSH", width=`1363`, height=`30`, decoding=`async`, loading=`lazy`)
+    .c-section__inner
+      .bg-black(class="pt-[17.813rem] pb-[6.25rem] tablet:pt-[14.75rem] tablet:pb-[3.75rem]")
+        //- title
+        +title({
+          main: 'RUSHへ問合せる',
+          sub: 'contact',
+          className: '_beige_'
+        })
+        p.c-text._beige_.text-center(class="mt-[1.875rem] tablet:mt-[1.875rem]") サウナのことはSauna Pro Team RUSHへ！#[br]施工に関すること・製品についての疑問・#[br(class="tablet:hidden")]プロジェクトのアイデア、#[br]その他どんな些細なご質問やご相談も大歓迎です。#[br]全力でサポートしますので、#[br(class="tablet:hidden")]ぜひお気軽にお問合せください。
+        ul.grid(class="gap-[2.5rem] justify-center mt-[3.125rem] tablet:grid-cols-4 tablet:w-[67.5rem] tablet:mx-auto tablet:mt-[1.875rem]")
+          li
+            +button({
+              Elm: 'a',
+              text: 'サウナデザイン・施工について',
+            })(class="c-button _beige_" href=`https://form.run/@form-all` target="_blank" rel="noreferrer")
+          li
+            +button({
+              Elm: 'a',
+              text: 'サウナストーブについて',
+            })(class="c-button _beige_" href=`https://form.run/@form-all` target="_blank" rel="noreferrer")
+          li
+            +button({
+              Elm: 'a',
+              text: 'メンテナンスについて',
+            })(class="c-button _beige_" href=`https://form.run/@form-all` target="_blank" rel="noreferrer")
+          li
+            +button({
+              Elm: 'a',
+              text: 'その他どんなことでも',
+            })(class="c-button _beige_" href=`https://form.run/@form-all` target="_blank" rel="noreferrer")

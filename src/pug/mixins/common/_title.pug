@@ -1,0 +1,11 @@
+//- ====================
+//- 【概要】 title
+//- 【詳細】
+//- ====================
+mixin title( options )
+  - options = options || {};
+  - var className = options.className || '';
+  - var tag = options.tag || 'h2';
+
+  #{tag}.c-title(class=`${className}` lang="en") !{options.main}
+  div.c-title__sub(class=`${className}`) !{options.sub}

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+// ===============================================
+// [ファイル概要] 自動スライダー
+// ===============================================
+@use "sass:math";
+@use "../../define/" as *;
+
+.c-autoSlider {
+  display: flex;
+  width: 200%;
+  animation: autoSlider 10s linear infinite;
+  @media (--tablet) {
+    animation: autoSlider 20s linear infinite;
+  }
+
+  &._reverse_{
+    animation: autoSliderReverse 10s linear infinite;
+    @media (--tablet) {
+      animation: autoSliderReverse 20s linear infinite;
+    }
+  }
+}

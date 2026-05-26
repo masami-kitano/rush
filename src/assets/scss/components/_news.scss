@@ -1,0 +1,26 @@
+@charset "UTF-8";
+// ===============================================
+// [ファイル概要] ニュース
+// ===============================================
+@use "sass:math";
+@use "../define/" as *;
+
+.c-news{
+  @media (--tablet) {
+    display: grid;
+    grid-template-columns: my_rem(240px) 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 0 my_rem(45px);
+  }
+}
+
+.c-news__contents{
+  @media (--tablet) {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+  }
+}
+
+.c-news__button{
+  align-self: end;
+}

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+// ===============================================
+// [ファイル概要] リード文
+// ===============================================
+@use "sass:math";
+@use "../../define/" as *;
+
+.c-lead {
+  text-align: center;
+  line-height: calc(45/30);
+  letter-spacing: 0.15em;
+  font-weight: var(--font-black);
+  font-size: my_rem(30px);
+  @media (--tablet) {
+    font-size: my_rem(20px);
+  }
+}

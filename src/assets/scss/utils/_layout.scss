@@ -1,0 +1,16 @@
+@charset "UTF-8";
+// ===============================================
+// [ファイル概要] Layout
+// [プレフィックス] "u-"
+// ===============================================
+// ----------
+// Box Sizing
+// ----------
+.u-box-border { box-sizing: border-box !important; }
+.u-box-content { box-sizing: content-box !important; }
+
+// ----------
+// Display
+// ----------
+.u-hidden { display: none !important; }
+.u-block { display: block !important; }

@@ -1,0 +1,157 @@
+//- ====================
+//- 【概要】 mission
+//- 【詳細】
+//- ====================
+//- テンプレート
+extends ../../pug/layouts/_layout.pug
+
+//- 現在のページ
+block currentPage
+  - var currentPage = 'mission'
+  - var dirPath = self.htmlWebpackPlugin.options.dirPath
+  - var domain = self.htmlWebpackPlugin.options.domain
+  -
+    var pageInfo = {
+      url_path: `mission/`, //- canonicalで使用
+      title: 'サウナ屋の使命（MISSION）｜SAUNA PRO TEAM RUSH', //- ページタイトル
+      description: '脳内のサウナを具現化し、最高最適化するプロ集団。RUSHの会社概要。', //- ディスクリプション 120文字以内に収めるのが良い
+      bodyClass: 'mission',
+      ogp_title: 'サウナ屋の使命（MISSION）｜SAUNA PRO TEAM RUSH', //- [OGP]ページのタイトル
+      ogp_type: 'article', //- [OGP]ページのタイプ トップページに「website」、ブログに「blog」、下層ページに「article」
+      ogp_url: `${domain}`, //- [OGP]ページのURL（フルパス）
+      ogp_description: '脳内のサウナを具現化し、最高最適化するプロ集団。RUSHの会社概要。', //- [OGP]ページのディスクリプション
+    }
+
+
+//- HTML(body要素内)
+block content
+  include ../../pug/mixins/common/_header.pug
+  include ../../pug/mixins/common/_title.pug
+  include ../../pug/mixins/_recruit.pug
+  include ../../pug/mixins/_contact.pug
+  include ../../pug/mixins/common/_footer.pug
+
+  //- ヘッダー
+  +header( currentPage )
+
+  //- メイン
+  main.bg-beige.overflow-hidden
+    section.c-section(class="pt-[1.875rem]")
+      .c-section__inner.relative
+        picture
+          source(media="(min-width: 768px)", srcset=`${dirPath}assets/images/mission/img_mv_1_pc.webp`)
+          img.w-full(src=`${dirPath}assets/images/mission/img_mv_1_sp.webp`, alt="", width=`1250`, height=`650`, decoding=`async`, loading=`eager`)
+        .absolute(class="top-0 left-[50%] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-black font-en tracking-[.15em] text-[1.25rem] text-black tablet:text-[1rem]") サウナ専門施工会社｜SAUNA PRO TEAM RUSH
+
+    section.c-section(class="pt-[3.75rem] tablet:pt-20")
+      div(class="absolute top-[-1.813rem] left-[50%] -translate-x-1/2 rotate-[10deg] w-full tablet:top-[-1.063rem]")
+        ul.c-autoSlider
+          li
+            img.c-labelImage(src=`${dirPath}assets/images/common/label_yellow.webp`, alt="Sauna Pro Team RUSH", width=`1363`, height=`30`, decoding=`async`, loading=`eager`)
+          li
+            img.c-labelImage(src=`${dirPath}assets/images/common/label_yellow.webp`, alt="Sauna Pro Team RUSH", width=`1363`, height=`30`, decoding=`async`, loading=`eager`)
+          li
+            img.c-labelImage(src=`${dirPath}assets/images/common/label_yellow.webp`, alt="Sauna Pro Team RUSH", width=`1363`, height=`30`, decoding=`async`, loading=`eager`)
+          li
+            img.c-labelImage(src=`${dirPath}assets/images/common/label_yellow.webp`, alt="Sauna Pro Team RUSH", width=`1363`, height=`30`, decoding=`async`, loading=`eager`)
+      .c-section__inner.relative
+        +title({
+          tag: 'h1',
+          main: 'サウナ屋の使命',
+          sub: 'mission',
+          className: ''
+        })
+        p.c-lead(class="mt-[3.125rem] tablet:mt-[1.875rem]") サウナを最高最適化する#[br]サウナのプロ集団
+        .relative
+          img(class="absolute top-[13.188rem] left-[50%] translate-x-[-50%] w-[28.125rem] tablet:top-[1.813rem] tablet:w-[15.375rem]" src=`${dirPath}assets/images/mission/text_about.svg`, alt="Sauna life, Tuned by RuSH", width=`450`, height=`379`, decoding=`async`, loading=`lazy`)
+          p.c-text._center_(class="relative mt-10 tablet:mt-[1.875rem]")
+            | 私たち SAUNA PRO TEAM RUSH の使命は、#[br]
+            | お客様の脳内にあるビジョンを具現化し、#[br]
+            | 細部まで徹底的にチューニングすること。#[br]#[br]
+
+            | 施工から企画、運用、#[br(class="tablet:hidden")]
+            | そしてその先にある体験まで、#[br]
+            | プロフェッショナルなクルーが、#[br(class="tablet:hidden")]
+            | 「最高最適化」します。#[br]#[br]
+
+            | 私たちがつくるサウナに、限界はありません。#[br]
+            | 想像を超え、枠組みを超え、#[br(class="tablet:hidden")]
+            | サウナの未来を加速させる。#[br]#[br]
+
+            | RUSHの可能性は、超無限大。#[br]
+            | まだ見ぬサウナと、共に。
+
+    section.c-section(class="mt-[3.75rem]")
+      div(class="absolute top-[-0.625rem] left-[-4.625rem] rotate-[-8deg] w-full tablet:top-[-1.063rem]")
+        ul.c-autoSlider
+          li
+            img.c-labelImage(src=`${dirPath}assets/images/common/label_red.webp`, alt="Sauna Pro Team RUSH", width=`1363`, height=`30`, decoding=`async`, loading=`lazy`)
+          li
+            img.c-labelImage(src=`${dirPath}assets/images/common/label_red.webp`, alt="Sauna Pro Team RUSH", width=`1363`, height=`30`, decoding=`async`, loading=`lazy`)
+          li
+            img.c-labelImage(src=`${dirPath}assets/images/common/label_red.webp`, alt="Sauna Pro Team RUSH", width=`1363`, height=`30`, decoding=`async`, loading=`lazy`)
+          li
+            img.c-labelImage(src=`${dirPath}assets/images/common/label_red.webp`, alt="Sauna Pro Team RUSH", width=`1363`, height=`30`, decoding=`async`, loading=`lazy`)
+      .c-section__inner._white_(class="py-20 tablet:pt-[3.75rem] tablet:pb-[5.625rem]")
+        +title({
+          main: 'サウナ屋のみんな',
+          sub: 'official crew',
+          className: ''
+        })
+        p.c-text._center_(class="relative mt-[3.125rem] tablet:mt-[1.875rem]")
+          | 施工、バックオフィス、クリエイティブ。#[br]
+          | 役割は違えど、志はひとつ。#[br]
+          | 北海道、関西、九州、そしてエストニア。#[br]#[br]
+
+          | RUSHという「サウナ屋」が掲げた旗のもとに、#[br]
+          | 全国各地、世界中から#[br]
+          | 最高に尖ったクルーが集まってきました。#[br]
+          | 現場で汗を流すのも、裏方で支えるのも、全員が主役。
+
+    section.c-section(class="mt-20")
+      div(class="absolute top-[-4.438rem] left-[50%] -translate-x-1/2 rotate-[11deg] w-full tablet:top-[-5.313rem] tablet:rotate-[7deg]")
+        ul.c-autoSlider
+          li
+            img.c-labelImage(src=`${dirPath}assets/images/common/label_brown.webp`, alt="Sauna Pro Team RUSH", width=`1363`, height=`30`, decoding=`async`, loading=`lazy`)
+          li
+            img.c-labelImage(src=`${dirPath}assets/images/common/label_brown.webp`, alt="Sauna Pro Team RUSH", width=`1363`, height=`30`, decoding=`async`, loading=`lazy`)
+          li
+            img.c-labelImage(src=`${dirPath}assets/images/common/label_brown.webp`, alt="Sauna Pro Team RUSH", width=`1363`, height=`30`, decoding=`async`, loading=`lazy`)
+          li
+            img.c-labelImage(src=`${dirPath}assets/images/common/label_brown.webp`, alt="Sauna Pro Team RUSH", width=`1363`, height=`30`, decoding=`async`, loading=`lazy`)
+      .c-section__inner._small_
+        div(class="tablet:flex tablet:gap-[6.875rem]")
+          div(class="tablet:mt-[4.75rem]")
+            img(class="hidden tablet:block tablet:w-[11rem] tablet:mb-10" src=`${dirPath}assets/images/common/logo_img_3.svg`, alt="Sauna Pro Team RUSH", width=`176`, height=`166`, decoding=`async`, loading=`lazy`)
+            +title({
+              main: '会社概要',
+              sub: 'company',
+              className: '_pcLeft_'
+            })
+          -
+            const companyData = [
+              { term: '社名', data: '株式会社 RUSH（ラッシュ）' },
+              { term: '屋号', data: 'SAUNA PRO TEAM RUSH<br class="tablet:hidden">（サウナプロチームラッシュ）' },
+              { term: '所在地', data: '〒168-006<br class="tablet:hidden">東京都杉並区方南２丁目２１－５高橋ビル３０１' },
+              { term: '資本金', data: '100,000円' },
+              { term: '代表取締役', data: '中山怜大' },
+              { term: '取引銀行', data: '三井住友銀行　自由が丘支店' },
+              { term: '事業内容', data: 'サウナ施工／サウナ設計／サウナメンテナンス／<br class="tablet:hidden">サウナプロデュース／サウナグッズ企画・制作／<br class="tablet:hidden">広報・PR' },
+              { term: '免許登録番号', data: '建設業者登録：東京都知事許可（特-5）第81469号' },
+              { term: '設立年月', data: '1982年5月' },
+              { term: '主な取引先', data: '一般顧客／totonou Japan株式会社／' },
+            ]
+          dl.c-dataList(class="mt-10 tablet:flex-1 tablet:mt-0")
+            each item in companyData
+              .c-dataList__item
+                dt.c-dataList__term= item.term
+                dd.c-dataList__data!= item.data
+
+    //- recruit
+    +recruit({ innerClass: 'pt-[6.875rem] tablet:pt-20' })
+
+    //- contact
+    +contact()
+
+  //- フッター
+  +footer( currentPage )

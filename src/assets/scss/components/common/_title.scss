@@ -1,0 +1,62 @@
+@charset "UTF-8";
+// ===============================================
+// [ファイル概要] タイトル
+// ===============================================
+@use "sass:math";
+@use "../../define/" as *;
+
+.c-title {
+  text-align: center;
+  line-height: math.div(29,20);
+  letter-spacing: .1em;
+  font-weight: var(--font-bold);
+  font-size: my_rem(20px);
+  color: var(--brown);
+  @media (--tablet) {
+    letter-spacing: .15em;
+    font-size: my_rem(12px);
+  }
+
+  &._beige_ {
+    color: var(--beige);
+  }
+
+  &._white_ {
+    color: var(--white);
+  }
+
+  &._pcLeft_ {
+    @media (--tablet) {
+      text-align: left;
+    }
+  }
+}
+
+.c-title__sub{
+  margin-block-start: my_rem(10px);
+  text-align: center;
+  text-transform: uppercase;
+  line-height: math.div(48,36);
+  letter-spacing: .1em;
+  font-family: var(--font-en);
+  font-weight: var(--font-black);
+  font-size: my_rem(36px);
+  color: var(--brown);
+  @media (--tablet) {
+    font-size: my_rem(24px);
+  }
+
+  &._beige_ {
+    color: var(--beige);
+  }
+
+  &._white_ {
+    color: var(--white);
+  }
+
+  &._pcLeft_ {
+    @media (--tablet) {
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+// ===============================================
+// [ファイル概要] スライダー
+// ===============================================
+@use "sass:math";
+@use "../../define/" as *;
+
+.c-slider{
+  position: relative;
+}
+
+.c-slider__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--duration-slider) var(--easeOut), visibility var(--duration-slider) var(--easeOut);
+
+  &.is-active {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+  }
+}
