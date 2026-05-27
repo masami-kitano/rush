@@ -6,102 +6,117 @@
 @use "../define/" as *;
 
 .c-recruit__lead{
-  margin-block-start: my_rem(50px);
+  margin-block-start: my_rem(32px);
   text-align: center;
-  line-height: math.div(45,30);
-  letter-spacing: .15em;
+  line-height: 1.5;
+  letter-spacing: .02em;
   font-weight: var(--font-black);
   font-size: my_rem(30px);
-  color: var(--white);
+  color: var(--brown);
   @media (--tablet) {
-    margin-block-start: my_rem(40px);
+    margin-block-start: my_rem(32px);
     font-size: my_rem(40px);
   }
 }
 
 .c-recruit__text{
-  margin-block-start: my_rem(40px);
+  margin-block-start: my_rem(85px);
   text-align: center;
-  line-height: math.div(46,24);
-  font-size: my_rem(24px);
-  color: var(--white);
+  line-height: 1.7;
+  letter-spacing: .05em;
+  font-size: my_rem(13px);
+  color: var(--brown);
   @media (--tablet) {
-    margin-block-start: my_rem(30px);
-    letter-spacing: .05em;
-    font-size: my_rem(14px);
-  }
-}
-
-.c-recruit__imageText{
-  position: absolute;
-  width: my_rem(230px);
-  bottom: my_rem(73px);
-  right: my_rem(40px);
-  @media (--tablet){
-    width: my_rem(197px);
-    bottom: my_rem(43px);
-    right: my_rem(108px);
-  }
-}
-
-.c-recruit__arrow{
-  position: absolute;
-  width: my_rem(50px);
-  bottom: my_rem(0px);
-  right: 50%;
-  transform: translateX(50%);
-  @media (--tablet){
-    width: my_rem(30px);
-  }
-}
-
-.c-recruit__body{
-  background-color: var(--white);
-  padding-block: my_rem(60px) my_rem(100px);
-  padding-inline: my_rem(55px);
-  @media (--tablet) {
-    padding-block: my_rem(60px) my_rem(35px);
-    padding-inline: my_rem(85px);
-  }
-}
-
-.c-recruit__list{
-  display: grid;
-  grid-template-rows: auto;
-  column-gap: my_rem(100px);
-  margin-block-start: my_rem(60px);
-  @media (--tablet){
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: my_rem(40px);
-    margin-block-start: my_rem(40px);
-  }
-}
-
-.c-recruit__item {
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 3;
-}
-
-.c-recruit__itemTitle{
-  text-align: center;
-  line-height: math.div(44,30);
-  letter-spacing: .1em;
-  font-weight: var(--font-bold);
-  font-size: my_rem(30px);
-  @media (--tablet){
-    text-align: left;
-    font-size: my_rem(16px);
-  }
-}
-
-.c-recruit__itemText{
-  margin-block-start: my_rem(30px);
-  line-height: math.div(46,22);
-  font-size: my_rem(22px);
-  @media (--tablet){
-    margin-block-start: my_rem(20px);
-    letter-spacing: .05em;
+    margin-block-start: my_rem(85px);
     font-size: my_rem(13px);
   }
+}
+
+
+.c-recruit__image{
+  position: absolute;
+  z-index: 1;
+}
+
+
+
+.c-recruitCards {
+  margin-block-start: my_rem(114px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: my_rem(40px);
+}
+
+.c-recruitCards__item {
+  position: relative;
+  background: #fff;
+  padding: my_rem(30px);
+}
+
+/* 下の吹き出し */
+.c-recruitCards__item::after {
+  content: "";
+  position: absolute;
+  bottom: my_rem(-25px);
+
+  width: my_rem(25px);
+  height: my_rem(25px);
+  background: #fff;
+}
+
+/* 左：右下向き */
+.c-recruitCards__item:nth-child(1)::after {
+  left: 75%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+/* 真ん中：真下 */
+.c-recruitCards__item:nth-child(2)::after {
+  left: 50%;
+  transform: translateX(-50%);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+/* 右：左下向き */
+.c-recruitCards__item:nth-child(3)::after {
+  left: 25%;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+
+.c-recruitCards__title {
+  font-size: my_rem(24px);
+  font-weight: var(--font-black);
+  color: var(--brown);
+}
+
+.c-recruitCards__sub {
+  margin-top: 30px;
+
+  font-size: my_rem(16px);
+  color: var(--brown);
+}
+
+.c-recruitCards__text {
+  margin-block: my_rem(20px);
+
+  line-height: 2;
+  font-size: my_rem(13px);
+  color: var(--brown);
+}
+
+.c-entry__subtitle{
+  margin-block-start: my_rem(66px);
+  text-align: center;
+  line-height: math.div(24,16);
+  font-size: my_rem(16px);
+  color: var(--brown);
+}
+
+.c-entry__text{
+  margin-block: my_rem(30px);
+  text-align: center;
+  line-height: math.div(23,13);
+  font-size: my_rem(13px);
+  color: var(--brown);
 }
