@@ -18,17 +18,17 @@ if ( have_posts() ) :
                 <ul class="js-storeSlider c-slider">
                   <li class="js-storeSlider__item c-slider__item">
                     <picture>
-                      <source media="(min-width: 768px)" srcset="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-01-pc.webp"><img class="w-full" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-01-pc.webp" alt="" width="1250" height="650" decoding="async" loading="eager">
+                      <source media="(min-width: 768px)" srcset="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-01-pc.webp"><img class="w-full" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-01-sp.webp" alt="" width="1250" height="650" decoding="async" loading="eager">
                     </picture>
                   </li>
                   <li class="js-storeSlider__item c-slider__item">
                     <picture>
-                      <source media="(min-width: 768px)" srcset="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-02-pc.webp"><img class="w-full" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-02-pc.webp" alt="" width="1250" height="650" decoding="async" loading="eager">
+                      <source media="(min-width: 768px)" srcset="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-02-pc.webp"><img class="w-full" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-02-sp.webp" alt="" width="1250" height="650" decoding="async" loading="eager">
                     </picture>
                   </li>
                   <li class="js-storeSlider__item c-slider__item">
                     <picture>
-                      <source media="(min-width: 768px)" srcset="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-03-pc.webp"><img class="w-full" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-03-pc.webp" alt="" width="1250" height="650" decoding="async" loading="eager">
+                      <source media="(min-width: 768px)" srcset="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-03-pc.webp"><img class="w-full" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-03-sp.webp" alt="" width="1250" height="650" decoding="async" loading="eager">
                     </picture>
                   </li>
                 </ul>
