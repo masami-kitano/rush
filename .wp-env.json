@@ -1,0 +1,12 @@
+{
+  "core": "./.wp-env-core/wordpress",
+  "port": 10088,
+  "themes": [
+    "./rush"
+  ],
+  "config": {
+    "WP_DEBUG": true,
+    "SCRIPT_DEBUG": true,
+    "WP_DEFAULT_THEME": "rush"
+  }
+}

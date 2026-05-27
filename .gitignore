@@ -4,10 +4,13 @@ node_modules/
 # Build outputs
 dist/
 dist_test/
+rush/assets/
 
 # Local development / caches
 .cache/
 .parcel-cache/
+.wp-env/
+.wp-env-core/
 
 # Logs
 npm-debug.log*
