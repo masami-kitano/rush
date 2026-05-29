@@ -17,7 +17,7 @@ if ( have_posts() ) :
               <div class="c-section__inner relative">
                 <ul class="js-storeSlider c-slider">
                   <li class="js-storeSlider__item c-slider__item">
-                    <picture>
+                    <picture class="">
                       <source media="(min-width: 768px)" srcset="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-01-pc.webp"><img class="w-full" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-01-pc.webp" alt="" width="1250" height="650" decoding="async" loading="eager">
                     </picture>
                   </li>
@@ -32,10 +32,9 @@ if ( have_posts() ) :
                     </picture>
                   </li>
                 </ul>
-                <h1 class="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"><img class="w-[17.063rem] tablet:w-[10.25rem]" src="<?= THEME_FILE_URI ?>/assets/images/common/logo_img_1.svg" alt="SAUNA PRO TEAM RUSH 可能性超無限大のサウナ屋" width="164" height="144 " decoding="async" loading="eager"></h1>
                 <div class="absolute top-0 left-[50%] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-black font-en tracking-[.15em] text-[1.25rem] text-black tablet:text-[1rem]">サウナ専門施工会社｜SAUNA PRO TEAM RUSH</div>
               </div>
-              <div class="absolute bottom-[-6.563rem] left-[50%] -translate-x-1/2 rotate-[7deg] z-10 w-full tablet:bottom-[-4.438rem]">
+              <div class="absolute bottom-[0rem] left-[50%] -translate-x-1/2 rotate-[7deg] z-10 w-full tablet:bottom-[-4.438rem]">
                 <ul class="c-autoSlider">
                   <li><img class="c-labelImage" src="<?= THEME_FILE_URI ?>/assets/images/common/label_yellow.webp" alt="Sauna Pro Team RUSH" width="1363" height="30" decoding="async" loading="eager"></li>
                   <li><img class="c-labelImage" src="<?= THEME_FILE_URI ?>/assets/images/common/label_yellow.webp" alt="Sauna Pro Team RUSH" width="1363" height="30" decoding="async" loading="eager"></li>
@@ -44,13 +43,16 @@ if ( have_posts() ) :
                 </ul>
               </div>
             </section>
-            <section class="c-section pt-[11.875rem] tablet:pt-[7.5rem] max-w-[80rem] mx-auto">
+            <section class="c-section pt-[3.125rem] tablet:pt-[5rem] max-w-[80rem] mx-auto">
               <div class="c-section__inner c-recruit">
                 <h2 class="c-title" lang="en">採用情報</h2>
                 <div class="c-title__sub">rush recruiting</div>
                 <p class="c-recruit__lead">サウナ屋になりたいなら<br>この指、とまらないか？</p>
                 <div class="relative">
-                  <p class="c-recruit__text">
+                <p class="c-recruit__text">
+                  みんなで作るサウナは別格だ。
+                </p>
+                  <p class="c-recruit__textsub">
                     図面を引くだけでも、木を組むだけでも、<br>
                     タイルを貼るだけでも完成しない。<br>
                     <br>
@@ -68,15 +70,15 @@ if ( have_posts() ) :
                     RUSHは、どこからどう見ても、サウナ屋。<br>
                     文化を継承し、つくる会社です。
                   </p>
-                  <img class="absolute -top-[0.25rem] left-[12rem] w-[11.25rem]" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-04.png" alt="Sauna Pro Team RUSH" width="180" height="180" decoding="async" loading="eager">
-                  <img class="absolute -top-[0.25rem] left-[56rem] w-[8.75rem]" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-05.png" alt="Sauna Pro Team RUSH" width="140" height="140" decoding="async" loading="eager">
-                  <img class="absolute top-[15rem] left-[5rem] w-[8.75rem]" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-06.png" alt="Sauna Pro Team RUSH" width="140" height="140" decoding="async" loading="eager">
-                  <img class="absolute top-[12rem] left-[64rem] w-[12rem]" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-07.png" alt="Sauna Pro Team RUSH" width="190" height="190" decoding="async" loading="eager">
+                  <img class="hidden tablet:block absolute -top-[0.25rem] left-[12rem] w-[11.25rem]" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-04.png" alt="Sauna Pro Team RUSH" width="180" height="180" decoding="async" loading="eager">
+                  <img class="hidden tablet:block absolute -top-[0.25rem] left-[56rem] w-[8.75rem]" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-05.png" alt="Sauna Pro Team RUSH" width="140" height="140" decoding="async" loading="eager">
+                  <img class="hidden tablet:block absolute top-[15rem] left-[5rem] w-[8.75rem]" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-06.png" alt="Sauna Pro Team RUSH" width="140" height="140" decoding="async" loading="eager">
+                  <img class="hidden tablet:block absolute top-[12rem] left-[64rem] w-[12rem]" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-07.png" alt="Sauna Pro Team RUSH" width="190" height="190" decoding="async" loading="eager">
                 </div>
               </div>
             </section>
             <section class="c-section relative pb-[6.25rem] max-w-[80rem] mx-auto">
-              <div class="absolute top-[-10rem] -translate-x-1/2 rotate-[-7deg] w-full tablet:top-[-10rem] z-10">
+              <div class="absolute top-[0rem] -translate-x-1/2 rotate-[-7deg] w-full z-10">
                 <ul class="c-autoSlider">
                   <li><img class="c-labelImage" src="<?= THEME_FILE_URI ?>/assets/images/common/label_red.webp" alt="Sauna Pro Team RUSH" width="1363" height="30" decoding="async" loading="eager"></li>
                   <li><img class="c-labelImage" src="<?= THEME_FILE_URI ?>/assets/images/common/label_red.webp" alt="Sauna Pro Team RUSH" width="1363" height="30" decoding="async" loading="eager"></li>
@@ -89,7 +91,7 @@ if ( have_posts() ) :
                   <h3 class="c-recruitCards__title">職人</h3>
 
                   <p class="c-recruitCards__sub">
-                    大工 / 電気 / タイル / 左官 / 塗装
+                    大工 / 電気
                   </p>
 
                   <p class="c-recruitCards__text">
@@ -131,15 +133,16 @@ if ( have_posts() ) :
               </ul>
               <div class="relative">
                 <p class="c-entry__subtitle">
-                  なんかいいかもと感じたら、まずは、会いに来てほしい。
+                  なんかいいかもと感じたら、<br class="tablet:hidden">
+                  まずは、会いに来てほしい。
                 </p>
                 <p class="c-entry__text">
                   今もRUSHは成長中なので、 どんどんおもしろくなっていく。<br> 
                   唯一無二の会社であり、仲間です。
                 </p>
                 <a class="c-button _pcLarge_ mx-auto mt-[2.5rem] tablet:mt-[0.813rem] tablet:w-full" href="" target="_blank" rel="">応募フォームを見る</a>
-                <img class="absolute top-[0.25rem] left-[8.25rem] w-[12rem]" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-08.png" alt="Sauna Pro Team RUSH" width="180" height="180" decoding="async" loading="eager">
-                <img class="absolute top-[1.5625rem] left-[62.25rem] w-[10rem]" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-09.png" alt="Sauna Pro Team RUSH" width="140" height="140" decoding="async" loading="eager">
+                <img class="hidden tablet:block absolute top-[0.25rem] left-[8.25rem] w-[12rem]" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-08.png" alt="Sauna Pro Team RUSH" width="180" height="180" decoding="async" loading="eager">
+                <img class="hidden tablet:block absolute top-[1.5625rem] left-[62.25rem] w-[10rem]" src="<?= THEME_FILE_URI ?>/assets/images/recruit/recruit-09.png" alt="Sauna Pro Team RUSH" width="140" height="140" decoding="async" loading="eager">
               </div>
             </section>
             <section class="c-section">
